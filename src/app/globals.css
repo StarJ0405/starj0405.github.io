@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -18,16 +18,45 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  html {
+    @apply layout-fix
+  }
+  
+  .layout-fix {
+    @apply SD:SD HD:HD FHD:FHD QHD:QHD UHD:UHD LAP_16:LAP_16
+  }
+
+  .SD {
+    @apply text-[8px]
+  }
+
+  .HD {
+    @apply text-[12px]
+  }
+
+  .FHD {
+    @apply text-[16px]
+  }
+
+  .QHD {
+    @apply text-[24px]
+  }
+
+  .UHD {
+    @apply text-[32px]
+  }
+
+  .LAP_16 {
+    @apply text-[28px]
   }
 }
