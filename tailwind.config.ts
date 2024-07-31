@@ -23,6 +23,9 @@ const config: Config = {
       UHD: { min: '3840px', max: '3840px' }, // 2160
     }
   },
-  plugins: [],
+  daisyui: {
+    themes: ["light"],
+  },
+  plugins: [require('daisyui'),],
 };
 export default config;
