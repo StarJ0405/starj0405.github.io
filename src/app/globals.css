@@ -44,7 +44,7 @@ body {
   }
 
   .SD {
-    @apply text-[8px]
+    @apply text-[6px]
   }
 
   .HD {
