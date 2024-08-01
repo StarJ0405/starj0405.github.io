@@ -3,24 +3,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Modal from './preset/Modal';
-export function numberToHex(number: number) {
-  switch (number) {
-    case 15:
-      return 'f';
-    case 14:
-      return 'e';
-    case 13:
-      return 'd';
-    case 12:
-      return 'c';
-    case 11:
-      return 'b';
-    case 10:
-      return 'a';
-    default:
-      return number;
-  }
-}
+
 export interface Skill {
   url: string, name: string, color: string, description?: string, has?: string, link?: string
 }
@@ -138,6 +121,24 @@ export default function Home() {
     } else if (messageInterval)
       clearInterval(messageInterval);
   }, [messages])
+  function numberToHex(number: number) {
+    switch (number) {
+      case 15:
+        return 'f';
+      case 14:
+        return 'e';
+      case 13:
+        return 'd';
+      case 12:
+        return 'c';
+      case 11:
+        return 'b';
+      case 10:
+        return 'a';
+      default:
+        return number;
+    }
+  }
   function setPortfolioPage(page: number) {
     if (page < 0)
       page = portfolioes.length + page % portfolioes.length;
