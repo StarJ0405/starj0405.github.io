@@ -37,10 +37,10 @@ export default function Home() {
   const maxAutoTick = 250;
   const portfolioes = [
     { name: '객체 탐지를 활용한 지능형 범위-지원 표면 결함 검사', image: '/real_DANN.png', io: '/dann' },
-    { name: '레시피 공유 플랫폼 (Food Recipe)', image: '/git.png' },
-    { name: '소셜 네트워크 서비스 사이트 (Social)', image: '/git.png' },
-    { name: '전자상거래 소매 중개업 사이트 (ShoppingMall)', image: '/git.png' },
-    { name: '회사 커뮤니케이션 및 협업 도구 (HoneyBadger)', image: '/git.png' }
+    { name: '레시피 공유 플랫폼 (Food Recipe)', image: '/git.png', io:'/food',git:'https://github.com/StarJ0405/FoodRecipeWeb' , page: 'http://server.starj.kro.kr:18180' },
+    { name: '소셜 네트워크 서비스 사이트 (Social)', image: '/git.png', io:'/social', git:'https://github.com/StarJ0405/Social', page: 'http://server.starj.kro.kr:13102' },
+    { name: '전자상거래 소매 중개업 사이트 (ShoppingMall)', image: '/git.png',io:'/shopping',git:'https://github.com/StarJ0405/ShoppingMall', page: 'http://server.starj.kro.kr:13104' },
+    { name: '회사 커뮤니케이션 및 협업 도구 (HoneyBadger)', image: '/git.png',io:'/honeybadger' ,git:'https://github.com/StarJ0405/HoneyBadger', page: 'http://server.starj.kro.kr:13106' }
   ] as Portfolio[];
 
 
@@ -253,7 +253,7 @@ export default function Home() {
       case 3:
         return <div key={page} className='w-[60%] h-[90%] relative'>
           <img src='/portfolio.png' alt='portfolio' className='border-b-4 mx-auto border-[#DDB71D] mb-8' style={{ height: '15%' }} />
-          <div className='flex bg-gray-600 border-8 h-[70%] relative' onMouseEnter={()=>autoTickRef.current=-20}>
+          <div className='flex bg-gray-600 border-8 h-[70%] relative' onMouseEnter={() => autoTickRef.current = -20}>
             <Portfolio portfolio={portfolioes[portfolioPageRef.current]} />
             <img src='/pre.png' className='w-[5rem] h-[5rem] absolute left-5 top-[50%] cursor-pointer hover:opacity-70' onClick={() => setPortfolioPage(portfolioPage - 1)} />
             <img src='/next.png' className='w-[5rem] h-[5rem] absolute right-5 top-[50%] cursor-pointer hover:opacity-70' onClick={() => setPortfolioPage(portfolioPage + 1)} />
