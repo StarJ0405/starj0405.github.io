@@ -61,6 +61,9 @@ export default function Home() {
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >객체 탐지를 활용한 지능형 범위-지원 표면 결함 검사</div>
                     <div className="flex w-full h-[70%] flex-col">
+                        <div className="self-end text-xs">
+                            2023-04 ~ 2023-11 (8개월)
+                        </div>
                         <div className="w-full mb-6 flex flex-col items-center border-gray-300 border-4">
                             <label className="text-center text-2xl font-bold p-2">목표</label>
                             <div className="border-gray-300 border-t-4 w-full"></div>
@@ -111,9 +114,7 @@ export default function Home() {
                     <div className="flex h-[70%] w-full flex-col">
                         <div className="w-full mb-6 flex justify-evenly">
                             <div className="border-gray-300 border-4">
-                                <div className="text-center text-2xl font-bold p-2">홍성재</div>
-                                <div className="border-gray-300 border-t-4 w-full"></div>
-                                <div className="text-2xl py-2 px-4 flex items-start"><img src="/leader.png" alt="leader" className="w-[1.8rem] h-[1.8rem]" />팀장</div>
+                                <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/leader.png" alt="leader" className="w-[1.8rem] h-[1.8rem]" />홍성재(팀장)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
                                     <li>서버 환경 구축</li>
@@ -121,9 +122,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
-                                <div className="text-center text-2xl font-bold p-2">최민기</div>
-                                <div className="border-gray-300 border-t-4 w-full"></div>
-                                <div className="text-2xl py-2 px-4 flex items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />팀원</div>
+                                <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />최민기(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
                                     <li>테스트 베드 구축</li>
@@ -131,9 +130,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
-                                <div className="text-center text-2xl font-bold p-2">김다현</div>
-                                <div className="border-gray-300 border-t-4 w-full"></div>
-                                <div className="text-2xl py-2 px-4 flex items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />팀원</div>
+                                <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />김다현(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
                                     <li>모니터링 시스템</li>
@@ -209,7 +206,7 @@ export default function Home() {
                     <div className="flex h-[70%] w-full flex-col relative">
                         <img src="/acc.png" alt="acc" className="cursor-pointer peer" />
                         <div className="absolute w-full -translate-y-1/2 top-[50%] -translate-x-1/2 left-[50%] hover:opacity-100 peer-hover:opacity-100 opacity-0 bg-white p-4 flex justify-center flex flex-col border-2 rounded-lg">
-                        <label className="self-center font-bold text-xl mt-2">특징</label>
+                            <label className="self-center font-bold text-xl mt-2">특징</label>
                             <label>DANN은 이미지 분류기를 선택할 수 있으며 이미지 분류기는 각 이미지를 학습하여 클래스와 도메인을 분류하는데 사용됩니다.</label>
                             <label className="self-center font-bold text-xl mt-2">모델 설명</label>
                             <label><label className="font-bold">CNN</label>은 데이터로부터 직접 학습하는 딥러닝 신경망 아키텍처 모델</label>

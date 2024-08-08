@@ -37,10 +37,10 @@ export default function Home() {
   const maxAutoTick = 250;
   const portfolioes = [
     { name: '객체 탐지를 활용한 지능형 범위-지원 표면 결함 검사', image: '/real_DANN.png', io: '/dann' },
-    { name: '레시피 공유 플랫폼 (Food Recipe)', image: '/git.png', io:'/food',git:'https://github.com/StarJ0405/FoodRecipeWeb' , page: 'http://server.starj.kro.kr:18180' },
-    { name: '소셜 네트워크 서비스 사이트 (Social)', image: '/git.png', io:'/social', git:'https://github.com/StarJ0405/Social', page: 'http://server.starj.kro.kr:13102' },
-    { name: '전자상거래 소매 중개업 사이트 (ShoppingMall)', image: '/git.png',io:'/shopping',git:'https://github.com/StarJ0405/ShoppingMall', page: 'http://server.starj.kro.kr:13104' },
-    { name: '회사 커뮤니케이션 및 협업 도구 (HoneyBadger)', image: '/git.png',io:'/honeybadger' ,git:'https://github.com/StarJ0405/HoneyBadger', page: 'http://server.starj.kro.kr:13106' }
+    { name: '레시피 공유 플랫폼 (Food Recipe)', image: '/food.png', io:'/food',git:'https://github.com/StarJ0405/FoodRecipeWeb' , page: 'http://server.starj.kro.kr:18180' },
+    { name: '소셜 네트워크 서비스 사이트 (Social)', image: '/social.png', io:'/social', git:'https://github.com/StarJ0405/Social', page: 'http://server.starj.kro.kr:13102' },
+    { name: '전자상거래 소매 중개업 사이트 (ShoppingMall)', image: '/shopping.png',io:'/shopping',git:'https://github.com/StarJ0405/ShoppingMall', page: 'http://server.starj.kro.kr:13104' },
+    { name: '회사 커뮤니케이션 및 협업 도구 (HoneyBadger)', image: '/honeybadger.png',io:'/honeybadger' ,git:'https://github.com/StarJ0405/HoneyBadger', page: 'http://server.starj.kro.kr:13106' }
   ] as Portfolio[];
 
 
