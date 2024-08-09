@@ -46,6 +46,7 @@ export default function Home() {
         isDelay.current = true;
         const interval = setInterval(() => { isDelay.current = false; clearInterval(interval) }, 100);
         delayInterval.current = interval;
+        setSkillModal(null);
     }
     function Icon(props: Skill) {
         return <div key={props.name} className='group relative p-4 rounded-full flex items-center justify-center border-4 w-[10rem] h-[10rem] m-3 cursor-pointer' style={{ borderColor: props.color }} onClick={() => setSkillModal(props)}>

@@ -46,6 +46,7 @@ export default function Home() {
         isDelay.current = true;
         const interval = setInterval(() => { isDelay.current = false; clearInterval(interval) }, 100);
         delayInterval.current = interval;
+        setSkillModal(null);
     }
     function Icon(props: Skill) {
         return <div key={props.name} className='group relative p-4 rounded-full flex items-center justify-center border-4 w-[10rem] h-[10rem] m-3 cursor-pointer' style={{ borderColor: props.color }} onClick={() => setSkillModal(props)}>
@@ -143,17 +144,17 @@ export default function Home() {
                     <div className="flex h-[70%] w-full flex-col">
 
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
-                            <Icon name='Python' url='/python.png' color='#3771A1' description='1991년 네덜란드계 소프트웨어 엔지니어인 귀도 반 로섬이 발표한 고급 프로그래밍 언어로, 인터프리터를 사용하는 객체지향 언어이자 플랫폼에 독립적인, 동적 타이핑 대화형 언어이다.' has='인터프리터 방식을 이해하고 프로젝트 수행이 가능합니다' link='https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC' />
-                            <Icon name='Yolo' url='/yolo.png' color='#00A3DF' description='You look only once의 축약어로, 이미지를 한번만 보고 바로 물체를 검출하는 딥러닝 기술을 이용한 물체 검출 모델이다.' has='물체 클래스들을 지정하여 학습을 통하여 물체의 클래스를 분류할 수 있습니다.' />
-                            <Icon name='DANN' url='/dann.png' color='#000000' description='Domain-Adversarial Training of Neural Networks의 축약어로, 소스 도메인과 타겟 도메인이 나누어 지정한 특징은 구별하나 그외 특징은 구별하지 못하게 만들어진 모델이다.' has='데이터를 통하여 학습 및 예측이 가능합니다.' />
+                            <Icon name='Python' url='/python.png' color='#3771A1' description='1991년 네덜란드계 소프트웨어 엔지니어인 귀도 반 로섬이 발표한 고급 프로그래밍 언어로, 인터프리터를 사용하는 객체지향 언어이자 플랫폼에 독립적인, 동적 타이핑 대화형 언어이다.' has='DANN 모델의 학습 언어로써 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC' />
+                            <Icon name='Yolo' url='/yolo.png' color='#00A3DF' description='You look only once의 축약어로, 이미지를 한번만 보고 바로 물체를 검출하는 딥러닝 기술을 이용한 물체 검출 모델이다.' has='레일 위에 물체 검출에 사용되었습니다.' />
+                            <Icon name='DANN' url='/dann.png' color='#000000' description='Domain-Adversarial Training of Neural Networks의 축약어로, 소스 도메인과 타겟 도메인이 나누어 지정한 특징은 구별하나 그외 특징은 구별하지 못하게 만들어진 모델이다.' has='물체가 결함이 있는지 확인하는데 사용되었습니다.' />
                             <Icon name='Resnet' url='/resnet.png' color='#012563' description='스킵 연결을 통해 잔차를 학습하도록 만들어진 인공신경망이다. 일반적인 딥러닝 신경망 모델보다 예측 정확도가 높다.' has='데이터를 통하여 모델 학습과 예측이 가능합니다.' link='https://ko.wikipedia.org/wiki/%EC%9E%94%EC%B0%A8_%EC%8B%A0%EA%B2%BD%EB%A7%9D' />
-                            <Icon name='Pytorch' url='/pytorch.png' color='#F15632' description='Python을 위한 오픈소스 머신 러닝 라이브러리로 Torch를 기반으로 하며, 자연어 처리와 같은 애플리케이션을 위해 사용된다. GPU사용이 가능하기 때문에 속도가 상당히 빠르다.' has='모델의 학습에 Pytorch 사용이 가능합니다.' link='https://ko.wikipedia.org/wiki/PyTorch' />
-                            <Icon name='Ubuntu' url='/ubuntu.png' color='#DE4814' description='영국 기업 캐노니컬이 개발, 배포하는 컴퓨터 운영 체제이다. 데비안 리눅스를 기반으로 개발되며, 데비안에 비해 사용자 편의성에 초점을 맞춘 리눅스 배포판이다.' has='배포를 위한 환경 구축이 가능합니다.' link='https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC' />
-                            <Icon name='OpenCV' url='/opencv.png' color='#8BDA67' description='실시간 컴퓨터 비전을 목적으로 한 프로그래밍 라이브러리이다.' has='지원하는 카메라 모듈과 연동하여 사용할 수 있습니다.' link='https://ko.wikipedia.org/wiki/OpenCV' />
+                            <Icon name='Pytorch' url='/pytorch.png' color='#F15632' description='Python을 위한 오픈소스 머신 러닝 라이브러리로 Torch를 기반으로 하며, 자연어 처리와 같은 애플리케이션을 위해 사용된다. GPU사용이 가능하기 때문에 속도가 상당히 빠르다.' has='데이터 학습에 사용되었습니다.' link='https://ko.wikipedia.org/wiki/PyTorch' />
+                            <Icon name='Ubuntu' url='/ubuntu.png' color='#DE4814' description='영국 기업 캐노니컬이 개발, 배포하는 컴퓨터 운영 체제이다. 데비안 리눅스를 기반으로 개발되며, 데비안에 비해 사용자 편의성에 초점을 맞춘 리눅스 배포판이다.' has='젯슨 나노의 운용환경으로 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC' />
+                            <Icon name='OpenCV' url='/opencv.png' color='#8BDA67' description='실시간 컴퓨터 비전을 목적으로 한 프로그래밍 라이브러리이다.' has='카메라 모듈과 연동하여 이미지 데이터를 얻는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/OpenCV' />
                             <Icon name='MariaDB' url='/mariadb.png' color='#32427A' description='오픈 소스의 관계형 데이터베이스 관리 시스템이다. MySQL과 동일한 소스 코드를 기반으로 한다.' link='https://ko.wikipedia.org/wiki/MariaDB' />
-                            <Icon name='NodeJS' url='/nodejs.png' color='#41893e' description='크로스플랫폼 오픈소스 자바스크립트 런타임 환경으로 윈도우, 리눅스, macOS 등을 지원한다.' has='형상관리를 위한 활용이 가능합니다.' link='https://ko.wikipedia.org/wiki/Node.js' />
-                            <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='HTML 태그와 선택자를 활용한 웹 디자인이 가능합니다.' link='https://ko.wikipedia.org/wiki/HTML' />
-                            <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='CSS를 활용한 웹 디자인이 가능합니다.' link='https://ko.wikipedia.org/wiki/CSS' />
+                            <Icon name='NodeJS' url='/nodejs.png' color='#41893e' description='크로스플랫폼 오픈소스 자바스크립트 런타임 환경으로 윈도우, 리눅스, macOS 등을 지원한다.' has='웹 페이지 라이브러리 관리에 사용되었습니다.' link='https://ko.wikipedia.org/wiki/Node.js' />
+                            <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
+                            <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/CSS' />
                         </div>
 
                     </div>

@@ -163,6 +163,7 @@ export default function Home() {
     if (messageInterval)
       clearInterval(messageInterval);
     setMessage([]);
+    setSkillModal(null);
   }
   function Icon(props: Skill) {
     return <div key={props.name} className='group relative p-4 rounded-full flex items-center justify-center border-4 w-[12.5rem] h-[12.5rem] m-4 cursor-pointer' style={{ borderColor: props.color }} onClick={() => setSkillModal(props)}>
