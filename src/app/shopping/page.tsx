@@ -219,7 +219,7 @@ export default function Home() {
                             <label>Google Sheet를 사용하여 명세서를 작성 후 프로그램을 진행하였습니다.</label>
                             <div className="flex">
                                 <img src="/api1.png" className="w-[400px] m-2 border-2" />
-                                <img src="/api2.png" className="h-[200px] m-2 border-2"/>
+                                <img src="/api2.png" className="h-[200px] m-2 border-2" />
                             </div>
 
                         </div>
@@ -246,11 +246,9 @@ export default function Home() {
                     <div className="flex h-[70%] w-full flex-col relative">
                         <img src="/schedule.png" className="cursor-pointer peer" alt="schedule" />
                         <div className="absolute w-full -translate-y-1/2 top-[50%] -translate-x-1/2 left-[50%] hover:opacity-100 peer-hover:opacity-100 opacity-0 bg-white p-4 flex justify-center flex flex-col border-2 rounded-lg">
-                            <label className="self-center text-xl font-bold mt-2">yolo 사용 이유</label>
-                            <label>움직이는 레일 위에서 물체 찾고 해당 물체의 위치를 특정하여 물체의 이미지 데이터를 확보하기 위해 사용했습니다.</label>
-                            <label className="self-center text-xl font-bold mt-2">V8 선택 이유</label>
-                            <label>레일 위에서 측정을 하기위해서는 빠르고 가벼운 모델이 필요했으며, 그 중에서도 가장 정확도가 높아야했습니다.</label>
-                            <label>목적에 가장 적합한 버전은 V8으로 판단하여 YoloV8을 선정했습니다.</label>
+                            <label className="self-center text-xl font-bold mt-2">스케줄링이란?</label>
+                            <label>일정한 주기로 정해놓은 시각마다 득정 기능을 작동하게 하는 시스템</label>
+                            <label>{'"초 분 시 일 월 요일"'}으로 반복되는 주기를 정하며 *은 매순간을 의미하며 /는 1/N 순간 마다 발동하게 됩니다.</label>
                         </div>
                     </div>
                 </div>
