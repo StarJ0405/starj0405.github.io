@@ -174,17 +174,25 @@ export default function Home() {
                 </div>
             case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
-                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >JWT With QAuth(Social)</div>
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >OAuth (Open Authorization) With JWT</div>
                     <div className="flex h-[70%] w-full flex-col relative">
-                        <img src="/jwt_qauth.png" className="cursor-pointer peer" alt="jwt_qauth" />
-                        준비중..
-                        {/* <div className="absolute w-full -translate-y-1/2 top-[50%] -translate-x-1/2 left-[50%] hover:opacity-100 peer-hover:opacity-100 opacity-0 bg-white p-4 flex justify-center flex flex-col border-2 rounded-lg">
-                            <label className="self-center text-xl font-bold mt-2">yolo 사용 이유</label>
-                            <label>움직이는 레일 위에서 물체 찾고 해당 물체의 위치를 특정하여 물체의 이미지 데이터를 확보하기 위해 사용했습니다.</label>
-                            <label className="self-center text-xl font-bold mt-2">V8 선택 이유</label>
-                            <label>레일 위에서 측정을 하기위해서는 빠르고 가벼운 모델이 필요했으며, 그 중에서도 가장 정확도가 높아야했습니다.</label>
-                            <label>목적에 가장 적합한 버전은 V8으로 판단하여 YoloV8을 선정했습니다.</label>
-                        </div> */}
+                        <img src="/oauth.png" className="cursor-pointer peer" alt="oauth" />
+                        
+                        <div className="absolute w-full -translate-y-1/2 top-[50%] -translate-x-1/2 left-[50%] hover:opacity-100 peer-hover:opacity-100 opacity-0 bg-white p-4 flex justify-center flex flex-col border-2 rounded-lg">
+                            <label className="self-center text-xl font-bold mt-2">OAuth 란?</label>
+                            <label>인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준</label>
+                            <label className="self-center text-xl font-bold mt-2">동작 순서</label>
+                            <ul className="list-decimal pl-4">
+                                <li>소셜 로그인 주소로 이동</li>
+                                <li>소셜 로그인</li>
+                                <li>사이트로부터 코드 획득</li>
+                                <li>code 백엔드 서버로 전송</li>
+                                <li>서버에서 code를 통하여 Social AccessToken 획득</li>
+                                <li>AccessToken을 통하여 소셜 계정 정보 획득</li>
+                                <li>정보를 통하여 아이디 찾기(없을 경우 자동 생성)</li>
+                                <li>아이드를 통하여 JWT 토큰 발행</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             default:
