@@ -157,42 +157,42 @@ export default function Home() {
                                     <li>서버 환경 구축</li>
                                     <li>Docker 및 Github Action</li>
                                     <li>무중단 배포</li>
-                                    <li>인사기능</li>
                                     <li>저장소 기능</li>
-                                    <li>마이페이지</li>
-                                    <li>비회원기능</li>
+                                    <li>인사기능</li>
+                                    <li>문의기능(비회원)</li>
+                                    <li>회원기능</li>
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
                                 <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />한성언(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
-                                    <li>이메일 프론트</li>
-                                    <li>일정 백엔드</li>
+                                    <li>이메일(FE)</li>
+                                    <li>일정(BE)</li>
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
                                 <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />남도원(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
-                                    <li>채팅 프론트</li>
-                                    <li>결재 백엔드</li>
+                                    <li>채팅(FE)</li>
+                                    <li>결재(BE)</li>
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
                                 <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />김태훈(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
-                                    <li>이메일 백엔드</li>
-                                    <li>일정 프론트</li>
+                                    <li>이메일(BE)</li>
+                                    <li>일정(FE)</li>
                                 </div>
                             </div>
                             <div className="border-gray-300 border-4">
                                 <div className="text-center text-2xl font-bold p-2 flex justify-center items-center"><img src="/person.png" alt="person" className="w-[1.8rem] h-[1.8rem]" />이지영(팀원)</div>
                                 <div className="border-gray-300 border-t-4 w-full"></div>
                                 <div className="p-4 text-xl">
-                                    <li>채팅 백엔드</li>
-                                    <li>결재 프론트</li>
+                                    <li>채팅(BE)</li>
+                                    <li>결재(FE)</li>
                                 </div>
                             </div>
                         </div>
