@@ -8,7 +8,7 @@ export default function Home() {
     const [skillModal, setSkillModal] = useState<Skill | null>(null)
     const [page, setPageStatus] = useState(0);
     const pageRef = useRef(page);
-    const infoes = ['메인', '역할', '배포 자동화', '무중단 배포','클라우드 스토리지']
+    const infoes = ['메인', '역할', '사용 기술', '배포 자동화', '무중단 배포', '클라우드 스토리지']
 
     const delayInterval = useRef(null as any);
     const isDelay = useRef(false);
@@ -197,12 +197,20 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <div className="w-[70rem] self-center my-2">
+                        <div className="font-bold my-1">느낀점/성장점</div>
+                        <div className="border-2 p-2 rounded-lg border-gray-500">
+                            Github Action을 통해 생각보다 다양한 작업이 가능하다는 것을 알게 되었습니다. 그중 하나는 도커 이미지를 자동으로 생성하고 업로드할 수 있다는 점이었고, 서버와 아이디, SSH 키 또는 비밀번호로 통신하여 특정 작업을 지시할 수 있다는 점도 매우 인상적이었습니다. 이를 통해 무중단 배포를 설정하면서, 개발자가 아는 것에 따라 작업 환경과 속도가 크게 달라질 수 있다는 중요한 교훈을 얻었습니다.
+                        </div>
+                    </div>
+                </div>
+            case 2:
+                return <div key={page} className="w-[60%] flex flex-col items-center relative">
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >사용된 기술</div>
                     <div className="flex h-[70%] w-full flex-col">
-
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
-                        <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
+                            <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
                             <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/CSS' />
                             <Icon name='JavaScript' url='/js.png' color='#E7A42B' description='객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용된다.' has='프론트 개발의 주 언어로 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8' />
                             <Icon name='Java' url='/java.png' color='#F8582A' description='썬 마이크로시스템즈의 제임스 고슬링(James Gosling)과 다른 연구원들이 개발한 객체 지향적 프로그래밍 언어이다.' has='백엔드 개발의 주 언어로 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)' />
@@ -214,10 +222,9 @@ export default function Home() {
                             <Icon name='Git' url='/git.png' color='#f05033' description='컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 스냅샷 스트림 기반의 분산 버전 관리 시스템이다.' has='형상 관리와 자동 배포에 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)' />
                             <Icon name='Docker' url='/docker.png' color='#129fdb' description='리눅스의 응용 프로그램들을 프로세스 격리 기술들을 사용해 컨테이너로 실행하고 관리하는 오픈 소스 프로젝트이다.' has='자동 및 무중단 배포에 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BB%A4_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)' />
                         </div>
-
                     </div>
                 </div>
-            case 2:
+            case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >빌드 자동화</div>
                     <div className="flex h-[70%] w-full flex-col">
@@ -230,7 +237,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 3:
+            case 4:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >무중단 배포</div>
                     <div className="flex h-[70%] w-full flex-col relative">
@@ -252,7 +259,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 4:
+            case 5:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >클라우드 스토리지(stream)</div>
                     <div className="flex h-[70%] w-full flex-col relative">

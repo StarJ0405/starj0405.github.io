@@ -8,7 +8,7 @@ export default function Home() {
     const [skillModal, setSkillModal] = useState<Skill | null>(null)
     const [page, setPageStatus] = useState(0);
     const pageRef = useRef(page);
-    const infoes = ['메인', '역할', '데이터', 'SVD']
+    const infoes = ['메인', '역할', '사용 기술', '데이터', 'SVD']
 
     const delayInterval = useRef(null as any);
     const isDelay = useRef(false);
@@ -118,21 +118,26 @@ export default function Home() {
             case 1:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >팀원구성 및 기술과 환경</div>
-                    <div className="flex h-[70%] w-full flex-col">
-                        <div className="w-full mb-6">
-                            <div className="border-gray-300 border-4">
-                                <div className="text-center text-2xl font-bold p-2">홍성재</div>
-                                <div className="border-gray-300 border-t-4 w-full"></div>
-                                <div className="p-4 text-xl">
-                                    <li>서버 환경 구축</li>
-                                    <li>배포 설정</li>
-                                    <li>백엔드</li>
-                                    <li>기계학습</li>
-                                </div>
-                            </div>
+                    <div className="w-[60rem] flex h-[70%] w-full flex-col border-gray-300 border-4 mb-4">
+                        <div className="text-center text-2xl font-bold p-2">홍성재</div>
+                        <div className="border-gray-300 border-t-4 w-full"></div>
+                        <div className="p-4 text-xl">
+                            <li>서버 환경 구축</li>
+                            <li>배포 설정</li>
+                            <li>백엔드</li>
+                            <li>기계학습</li>
                         </div>
-
                     </div>
+                    <div className="w-[60rem] self-center my-2">
+                        <div className="font-bold my-1">느낀점/성장점</div>
+                        <div className="border-2 p-2 rounded-lg border-gray-500">
+                            이번 프로젝트는 개인적으로 처음 시작하는 웹사이트 개발 경험이었습니다. 타임 리프 방식으로 복수의 데이터를 받아오는 과정에서 많은 어려움을 겪었지만, 이를 통해 스프링 부트에 대한 이해도가 크게 향상되었습니다. 다만, 많은 데이터가 필요한 사이트를 선택함으로써 실제 작업 외에도 데이터 처리에 상당한 시간을 투자하게 되어 아쉬움이 남습니다. 그러나 이러한 경험 덕분에 추천 시스템에 대한 깊이 있는 학습을 할 수 있었고, 이는 향후 프로젝트에 큰 도움이 될 것이라고 확신합니다. 전체적으로 이번 프로젝트는 저에게 기술적인 성장뿐만 아니라 문제 해결 능력을 키우는 소중한 기회를 제공했습니다.
+                        </div>
+                    </div>
+                </div>
+            case 2:
+                return <div key={page} className="w-[60%] flex flex-col items-center relative">
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >사용된 기술</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
                             <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
@@ -147,7 +152,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 2:
+            case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >데이터 정제</div>
                     <div className="flex h-[70%] w-full flex-col">
@@ -164,7 +169,7 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-            case 3:
+            case 4:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >SVD(Singular Value Decomposition)</div>
                     <div className="flex h-[70%] w-full flex-col relative">

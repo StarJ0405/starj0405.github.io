@@ -260,10 +260,10 @@ export default function Home() {
             <img src='/next.png' className='w-[5rem] h-[5rem] absolute right-5 top-[50%] cursor-pointer hover:opacity-70' onClick={() => setPortfolioPage(portfolioPage + 1)} />
 
             <button className={'absolute p-2 bg-white rounded-full left-2 ml-1 bottom-4' + (auto ? '' : ' hidden')} onClick={() => setAuto(false)} >
-              <img src='/auto.png' className='w-[2rem] h-[2rem]' />
+              <img src='/stop.png' className='w-[2rem] h-[2rem]' />
             </button>
             <button className={'absolute p-2 bg-white rounded-full left-2 ml-1 bottom-4' + (auto ? ' hidden' : '')} onClick={() => setAuto(true)} >
-              <img src='/stop.png' className='w-[2rem] h-[2rem]' />
+              <img src='/auto.png' className='w-[2rem] h-[2rem]' />
             </button>
             <div ref={autoRef} className='absolute bg-white py-2 px-4 border font-bold bottom-2 left-[50%]'>{`${portfolioPage + 1} / ${portfolioes.length}`}</div>
           </div>

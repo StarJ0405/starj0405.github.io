@@ -8,7 +8,7 @@ export default function Home() {
     const [skillModal, setSkillModal] = useState<Skill | null>(null)
     const [page, setPageStatus] = useState(0);
     const pageRef = useRef(page);
-    const infoes = ['메인', '역할', '시스템 설계도', 'rest_api', 'ssr+csr', '스케쥴링']
+    const infoes = ['메인', '역할', '사용 기술', '시스템 설계도', 'rest_api', 'ssr+csr', '스케쥴링']
 
     const delayInterval = useRef(null as any);
     const isDelay = useRef(false);
@@ -182,10 +182,18 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <div className="w-[65rem] self-center my-2">
+                        <div className="font-bold my-1">느낀점/성장점</div>
+                        <div className="border-2 p-2 rounded-lg border-gray-500">
+                            쇼핑몰에 필요한 기능이 생각보다 적다고 여겼지만, 전체 프론트엔드를 담당하면서 데이터 유지에 대한 깊은 고민이 필요하다는 것을 깨달았습니다. 기간이 짧아 결제 API를 연동하지 못한 점이 아쉬웠고, 기한 내에 프로젝트를 마무리하기 위해서는 페이스 조절의 중요성을 느꼈습니다. 또한 프론트엔드를 맡으면서 백엔드와의 소통 방식에 대해서도 많은 것을 배웠습니다.
+                        </div>
+                    </div>
+                </div>
+            case 2:
+                return <div key={page} className="w-[60%] flex flex-col items-center relative">
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >사용된 기술</div>
                     <div className="flex h-[70%] w-full flex-col">
-
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
                             <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='HTML 태그와 선택자를 활용한 웹 디자인이 가능합니다.' link='https://ko.wikipedia.org/wiki/HTML' />
                             <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='CSS를 활용한 웹 디자인이 가능합니다.' link='https://ko.wikipedia.org/wiki/CSS' />
@@ -198,17 +206,16 @@ export default function Home() {
                             <Icon name='NodeJS' url='/nodejs.png' color='#41893e' description='크로스플랫폼 오픈소스 자바스크립트 런타임 환경으로 윈도우, 리눅스, macOS 등을 지원한다.' has='형상관리를 위한 활용이 가능합니다.' link='https://ko.wikipedia.org/wiki/Node.js' />
                             <Icon name='Git' url='/git.png' color='#f05033' description='컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 스냅샷 스트림 기반의 분산 버전 관리 시스템이다.' has='Github Action과 협업을 위한 PR 사용이 가능합니다.' link='https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)' />
                         </div>
-
                     </div>
                 </div>
-            case 2:
+            case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >시스템 설계도</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <img src="/shopping_structure.png" alt="shopping_structure" />
                     </div>
                 </div>
-            case 3:
+            case 4:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >REST(Representational State Transfer) API</div>
                     <div className="flex h-[70%] w-full flex-col relative">
@@ -226,7 +233,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 4:
+            case 5:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >SSR & CSR(Server & Client Side Rendering)</div>
                     <div className="flex h-[70%] w-full flex-col relative">
@@ -241,7 +248,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 5:
+            case 6:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >스케쥴링</div>
                     <div className="flex h-[70%] w-full flex-col relative">

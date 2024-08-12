@@ -8,7 +8,7 @@ export default function Home() {
     const [skillModal, setSkillModal] = useState<Skill | null>(null)
     const [page, setPageStatus] = useState(0);
     const pageRef = useRef(page);
-    const infoes = ['메인', '역할', 'JWT 로그인', '소셜 로그인']
+    const infoes = ['메인', '역할', '사용 기술', 'JWT 로그인', '소셜 로그인']
 
     const delayInterval = useRef(null as any);
     const isDelay = useRef(false);
@@ -118,24 +118,29 @@ export default function Home() {
             case 1:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >팀원구성 및 기술과 환경</div>
-                    <div className="flex h-[70%] w-full flex-col">
-                        <div className="w-full mb-6">
-                            <div className="border-gray-300 border-4">
-                                <div className="text-center text-2xl font-bold p-2">홍성재</div>
-                                <div className="border-gray-300 border-t-4 w-full"></div>
-                                <div className="p-4 text-xl">
-                                    <li>서버 환경 구축</li>
-                                    <li>배포 설정</li>
-                                    <li>프론트엔드</li>
-                                    <li>백엔드</li>
-                                </div>
-                            </div>
+                    <div className="w-[60rem] flex h-[70%] w-full flex-col border-gray-300 border-4 mb-4">
+                        <div className="text-center text-2xl font-bold p-2">홍성재</div>
+                        <div className="border-gray-300 border-t-4 w-full"></div>
+                        <div className="p-4 text-xl">
+                            <li>서버 환경 구축</li>
+                            <li>배포 설정</li>
+                            <li>프론트엔드</li>
+                            <li>백엔드</li>
                         </div>
-
                     </div>
+                    <div className="w-[60rem] self-center my-2">
+                        <div className="font-bold my-1">느낀점/성장점</div>
+                        <div className="border-2 p-2 rounded-lg border-gray-500">
+                            처음으로 프론트엔드를 구현하면서, 스프링 부트(백엔드)만으로 작업했을 때보다 데이터 유지 및 서버 간의 통신에서 여러 가지 어려움을 겪었습니다. 그러나 단독으로 운영할 때는 경험하지 못했던 속도와 성능의 향상을 체감하게 되었고, 이러한 과정은 저에게 큰 성장의 기회를 제공했습니다. 프론트엔드와의 통합 작업을 통해 전체 시스템의 구조를 더 깊이 이해하게 되었고, 다양한 기술 스택을 조화롭게 활용하는 방법을 배우게 되어 더욱 발전할 수 있었습니다.
+                        </div>
+                    </div>
+                </div>
+            case 2:
+                return <div key={page} className="w-[60%] flex flex-col items-center relative">
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >사용된 기술</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
-                        <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
+                            <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
                             <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/CSS' />
                             <Icon name='JavaScript' url='/js.png' color='#E7A42B' description='객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용된다.' has='프론트 개발의 주 언어로 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8' />
                             <Icon name='Java' url='/java.png' color='#F8582A' description='썬 마이크로시스템즈의 제임스 고슬링(James Gosling)과 다른 연구원들이 개발한 객체 지향적 프로그래밍 언어이다.' has='백엔드 개발의 주 언어로 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)' />
@@ -146,10 +151,9 @@ export default function Home() {
                             <Icon name='NodeJS' url='/nodejs.png' color='#41893e' description='크로스플랫폼 오픈소스 자바스크립트 런타임 환경으로 윈도우, 리눅스, macOS 등을 지원한다.' has='프론트 라이브러리 관리를 위해 사용되었습니다.' link='https://ko.wikipedia.org/wiki/Node.js' />
                             <Icon name='Git' url='/git.png' color='#f05033' description='컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 스냅샷 스트림 기반의 분산 버전 관리 시스템이다.' has='형상 관리를 위해 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)' />
                         </div>
-
                     </div>
                 </div>
-            case 2:
+            case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >JWT(JSON Web Token)</div>
                     <div className="flex h-[70%] w-full flex-col">
@@ -173,7 +177,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 3:
+            case 4:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >OAuth (Open Authorization) With JWT</div>
                     <div className="flex h-[70%] w-full flex-col relative">

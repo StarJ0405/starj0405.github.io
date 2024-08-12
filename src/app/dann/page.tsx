@@ -8,7 +8,7 @@ export default function Home() {
     const [skillModal, setSkillModal] = useState<Skill | null>(null)
     const [page, setPageStatus] = useState(0);
     const pageRef = useRef(page);
-    const infoes = ['메인', '역할', '시스템 설계도', '자료 흐름도', '동작 방식', '소프트웨어 흐름도', 'DANN', 'DANN 내부 모델 선정', 'yolo']
+    const infoes = ['메인', '역할', '사용 기술', '시스템 설계도', '자료 흐름도', '동작 방식', '소프트웨어 흐름도', 'DANN', 'DANN 내부 모델 선정', 'yolo']
 
     const delayInterval = useRef(null as any);
     const isDelay = useRef(false);
@@ -139,10 +139,19 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-
+                        <div className="w-[60rem] self-center">
+                            <div className="font-bold my-1">느낀점/성장점</div>
+                            <div className="border-2 p-2 rounded-lg border-gray-500">
+                                비록 금전적인 한계와 데이터 부족으로 원하는 성능에 도달하지는 못했으나, 실제 Jetson Nano 보드와 센서를 사용하여 시스템을 구성해본 것은 매우 값진 경험이었습니다. 이 과정에서 인공지능학습에 있어 데이터의 중요성을 깊이 깨달았습니다. 또한, 인공지능 모델을 구축하면서 작은 값의 변화가 큰 결과값의 변화를 초래할 수 있다는 점과, 동일한 데이터 셋을 사용하더라도 모델의 선택에 따라 결과가 크게 달라질 수 있다는 사실을 알게 되었습니다. 이러한 경험은 앞으로의 프로젝트에서 더 나은 결과를 도출하기 위한 중요한 교훈이 될 것입니다.
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex h-[70%] w-full flex-col">
 
+                </div>
+            case 2:
+                return <div key={page} className="w-[60%] flex flex-col items-center relative">
+                    <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >사용된 기술</div>
+                    <div className="flex h-[70%] w-full flex-col">
                         <div className="border-gray-300 border-4 rounded-xl flex flex-wrap w-full h-[30rem] items-center">
                             <Icon name='Python' url='/python.png' color='#3771A1' description='1991년 네덜란드계 소프트웨어 엔지니어인 귀도 반 로섬이 발표한 고급 프로그래밍 언어로, 인터프리터를 사용하는 객체지향 언어이자 플랫폼에 독립적인, 동적 타이핑 대화형 언어이다.' has='DANN 모델의 학습 언어로써 사용되었습니다.' link='https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC' />
                             <Icon name='Yolo' url='/yolo.png' color='#00A3DF' description='You look only once의 축약어로, 이미지를 한번만 보고 바로 물체를 검출하는 딥러닝 기술을 이용한 물체 검출 모델이다.' has='레일 위에 물체 검출에 사용되었습니다.' />
@@ -156,38 +165,37 @@ export default function Home() {
                             <Icon name='HTML' url='/html.png' color='#D44D26' description='하이퍼 텍스트 마크업 언어는 웹 페이지 표시를 위해 개발된 지배적인 마크업 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/HTML' />
                             <Icon name='CSS' url='/css.png' color='#264DE4' description='종속형 시트 또는 캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어이다.' has='웹페이지를 표현하는데 사용되었습니다.' link='https://ko.wikipedia.org/wiki/CSS' />
                         </div>
-
                     </div>
                 </div>
-            case 2:
+            case 3:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >시스템 설계도</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <img src="/system.png" alt="system" />
                     </div>
                 </div>
-            case 3:
+            case 4:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >자료 흐름도</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <img src="/flow.png" alt="flow" />
                     </div>
                 </div>
-            case 4:
+            case 5:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >동작 방식</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <img src="/action.png" alt="action" />
                     </div>
                 </div>
-            case 5:
+            case 6:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >소프트웨어 흐름도</div>
                     <div className="flex h-[70%] w-full flex-col">
                         <img src="/software.png" alt="software" />
                     </div>
                 </div>
-            case 6:
+            case 7:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >DANN란?</div>
                     <div className="flex h-[70%] w-full flex-col relative">
@@ -201,7 +209,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 7:
+            case 8:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >이미지 분류기 모델 선정표</div>
                     <div className="flex h-[70%] w-full flex-col relative">
@@ -218,7 +226,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            case 8:
+            case 9:
                 return <div key={page} className="w-[60%] flex flex-col items-center relative">
                     <div className="w-[55rem] border-b-4 mx-auto border-[#DDB71D] mb-16 text-[#DDB71D] text-4xl flex items-center justify-center py-4" >YOLO (You Look Only Once)</div>
                     <div className="flex h-[70%] w-full flex-col relative">
